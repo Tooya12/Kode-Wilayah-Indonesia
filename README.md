@@ -1,23 +1,31 @@
-# kodewilayah/permendagri-72-2019
+# Kode Wilayah Permendagri-72-2019
 
-Scraper & scraping results for Permendagri No. 72/2019. The results are available in [`dist/base.csv`](dist/base.csv), each row containing:
+Tersedia dalam bentuk json dan csv file yang tersedia di [`dist`](dist)
 
-* Region code
-* Name as it appears on the Permendagri with minimal sanitisation
+base.csv yang di ubah ke dalam json menggunakan [`baseCsvToJson.py`](baseCsvToJson.py).
 
-## Dependencies
+di dalam base.json terdapat "Nama Wilayah" dan "value", value berisi kode wilayah.
 
-If you're on Windows, using WSL would make installing the dependencies a lot easier. [You can use Visual Studio Code with WSL too for the best development experience.](https://code.visualstudio.com/docs/remote/wsl)
+## Stucture file json
+```bash
+   Provinsi
+    ├── Kabupaten
+    │   ├── Kelurahan
+    │   │   ├── Desa
+    │   │   │   └── value
+    │   │   └── value
+    │   └── value
+    └── value
+```
 
-### pdftotext
+jika ingin menjalankan program nya gunakan python 3.11+ dan install requirements:
 
-pdftotext is used for finding relevant pages from the raw PDF file. There are [several dependencies](https://pypi.org/project/pdftotext/) that need to be installed beforehand.
+```bash
+   pip install -r requirements
+```
 
-    sudo apt install build-essential libpoppler-cpp-dev pkg-config python3-dev
-    pip install pdftotext
+Jalankan program nya:
 
-### tabula-py
-
-We use [tabula-py](https://pypi.org/project/tabula-py/), which is a wrapper for [tabula-java](https://github.com/tabulapdf/tabula-java).
-
-Java needs to be installed and available from your `PATH`.
+```bash
+   python baseCsvToJson.py
+```
