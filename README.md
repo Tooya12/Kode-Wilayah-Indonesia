@@ -9,9 +9,9 @@ di dalam base.json terdapat "Nama Wilayah" dan "value", value berisi kode wilaya
 ## Stucture file json
 ```bash
    Provinsi
-    ├── Kabupaten
-    │   ├── Kelurahan
-    │   │   ├── Desa
+    ├── Kabupaten/Kota
+    │   ├── Kecamatan
+    │   │   ├── Kelurahan/Desa
     │   │   │   └── value
     │   │   └── value
     │   └── value
