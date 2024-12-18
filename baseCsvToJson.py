@@ -14,9 +14,9 @@ with Progress(transient=True) as progress:
     progress.update(taskOne, advance=1)
 
     provinsi = None
-    kabupaten = None
-    kelurahan = None
-    desa = None
+    kabupaten_kota = None
+    kecamatan = None
+    kelurahan_desa = None
 
     checkPoint = 0
     dictCsv = {}
@@ -38,21 +38,21 @@ with Progress(transient=True) as progress:
                     progress.update(taskTwo, advance=1)
 
                 if (lenOfNumber == 5):
-                    kabupaten = itter[1]
+                    kabupaten_kota = itter[1]
 
-                    dictCsv[provinsi].update({kabupaten: {"value": itter[0]}})
+                    dictCsv[provinsi].update({kabupaten_kota: {"value": itter[0]}})
                     progress.update(taskTwo, advance=1)
 
                 if (lenOfNumber == 8):
-                    kelurahan = itter[1]
+                    kecamatan = itter[1]
 
-                    dictCsv[provinsi][kabupaten].update({kelurahan: {"value": itter[0]}})
+                    dictCsv[provinsi][kabupaten_kota].update({kecamatan: {"value": itter[0]}})
                     progress.update(taskTwo, advance=1)
 
                 if (lenOfNumber == 13):
-                    desa = itter[1]
+                    kelurahan_desa = itter[1]
 
-                    dictCsv[provinsi][kabupaten][kelurahan].update({desa: {"value": itter[0]}})
+                    dictCsv[provinsi][kabupaten_kota][kecamatan].update({kelurahan_desa: {"value": itter[0]}})
                     progress.update(taskTwo, advance=1)
 
     json = ujson.dumps(dictCsv, indent=4)
