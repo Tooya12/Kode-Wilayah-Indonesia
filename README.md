@@ -1,10 +1,12 @@
-# Kode Wilayah Permendagri-72-2019
+# Kode Wilayah Permendagri-72-2019 dan Kepmendagri No 100.1.1-6117 Tahun 2022
 
 Tersedia dalam bentuk json dan csv file yang tersedia di [`dist`](dist)
 
-base.csv yang di ubah ke dalam json menggunakan [`baseCsvToJson.py`](baseCsvToJson.py).
+permendagri-2019.csv dan kepmendagri-2022.csv yang di ubah ke dalam json menggunakan [`wilayahCsvToJson.py`](wilayahCsvToJson.py).
 
-di dalam base.json terdapat "Nama Wilayah" dan "value", value berisi kode wilayah.
+di dalam permendagri-2019.json dan kepmendagri-2022.json terdapat "Nama Wilayah" dan "value".
+
+value berisi kode wilayah.
 
 ## Stucture file json
 ```bash
@@ -27,5 +29,5 @@ jika ingin menjalankan program nya gunakan python 3.11+ dan install requirements
 Jalankan program nya:
 
 ```bash
-   python baseCsvToJson.py
+   python wilayahCsvToJson.py
 ```
