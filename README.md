@@ -20,10 +20,10 @@ value berisi kode wilayah.
     └── value
 ```
 
-jika ingin menjalankan program nya gunakan python 3.11+ dan install requirements:
+Jika ingin menjalankan program nya gunakan python 3.11+ dan install requirements:
 
 ```bash
-   pip install -r requirements
+   pip install -r requirements.txt
 ```
 
 Jalankan program nya:
