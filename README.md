@@ -31,3 +31,6 @@ Jalankan program nya:
 ```bash
    python wilayahCsvToJson.py
 ```
+
+## Credits
+- [cahyadsn](https://github.com/cahyadsn/wilayah) Untuk data Kepmendagri No 100.1.1-6117 Tahun 2022
