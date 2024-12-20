@@ -3,6 +3,7 @@ import ujson
 import sys
 from rich.progress import Progress
 from rich import print
+from time import sleep
 
 try:
     print("1. permendagri-2019\n2. kepmendagri-2022")
@@ -42,7 +43,7 @@ with Progress(transient=True) as progress:
     checkPoint = 0
     dictCsv = {}
 
-    totalTaskTwo = len(fileCsv) * 2 + 2
+    totalTaskTwo = len(fileCsv) + 2
 
     taskTwo = progress.add_task("[yellow]Processing json...", total=totalTaskTwo)
 
@@ -83,5 +84,6 @@ with Progress(transient=True) as progress:
         file.write(json)
         file.close()
 
+    sleep(0.6)
     progress.update(taskTwo, advance=1)
-    print("[green]Success making json...")
+    print("\n[green]Success making json...")
